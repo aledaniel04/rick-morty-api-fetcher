@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
+    background-size: cover;
+    
+}
+
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff') format('woff');
+  }
+
+  p{
+    font-family: 'Get Schwifty';
+}
+
+.contendor{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.contendor-padre{
+    margin-top: 120px;
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: mandatory;
+    scrollbar-width: none;
+}
+
+.contendor-padre ::-webkit-scrollbar{
+    display: none;
+}
+
+.contendor-hijo{
+    scroll-snap-align: initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 30px 0 30px;
+    background: RGB(235, 228, 128);
+    border-radius: 20px;
+    width: max-content;
+}
+
+.contendor-hijo:hover{
+    transform: scale(0.98);
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.80);
+    cursor: pointer;
+}
+
+img{
+    border-radius: 20px;
+}
+
+.names{
+    font-size: 20px;
+    color: #08BAE3;
+}
+
+.texto{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.texto p{
+    text-align: start;
+    color: rgba(0,0,0,0.5);
+    margin-left: 10px;
+}
+
+/* titulo*/
+.container-title {
+    height: 100vh;
+    display: grid;
+  }
+  .title {
+    position: absolute;
+    top: 3%;
+    left: 35%;
+    text-align: center;
+    font-family: 'Get Schwifty';
+    font-size: 5em;
+    color: #08BAE3;
+    z-index: 50;
+    -webkit-text-stroke: 1px rgba(0,0,0,0.5);
+    
+    span {
+      font-size: 0.5em;
+    }
+  }
+  
+  .title.middle {
+    -webkit-text-stroke: 0.1em #FFF765;
+    z-index: 49;
+  }
+  
+  .title.bottom {
+    -webkit-text-stroke: 0.4em black;
+    z-index: 48;
+  }
